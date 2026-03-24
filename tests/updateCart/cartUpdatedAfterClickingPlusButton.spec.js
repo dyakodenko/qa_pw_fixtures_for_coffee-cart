@@ -1,6 +1,7 @@
 import { test } from '../fixtures/fixtures';
 import { COFFEE_PRICES } from '../../src/constants';
 import { priceFormatStr } from '../../src/common/helpers/getPriceForQuantity';
+import { totalPriceFormatStr } from '../../src/common/helpers/getPriceForQuantity';
 
 test('Assert cart updated correctly after clicking plus for drinks', async ({
   menuPage,
@@ -36,6 +37,8 @@ test('Assert cart updated correctly after clicking plus for drinks', async ({
   );
 
   await cartPage.assertTotalCheckoutContainsValue(
-    priceFormatStr(COFFEE_PRICES.ESPRESSO * 2 + COFFEE_PRICES.CAPPUCCINO * 2),
+    totalPriceFormatStr(
+      COFFEE_PRICES.ESPRESSO * 2 + COFFEE_PRICES.CAPPUCCINO * 2,
+    ),
   );
 });
