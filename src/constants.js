@@ -1,4 +1,6 @@
 export const COFFEE_PRICES = {
   ESPRESSO: 10,
   CAPPUCCINO: 19,
+  MOCHA: 4,
+  AMERICANO: 7,
 };

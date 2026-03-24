@@ -1,5 +1,5 @@
 export function unitPriceFormatStr(unitPrice: number, unitsNumber: number) {
-  return `$${unitPrice.toFixed(2)} x ${unitsNumber}`;
+  return `${unitPrice.toFixed(2)} x ${unitsNumber}`;
 }
 
 export function priceFormatStr(unitPrice: number, unitsNumber = 1) {

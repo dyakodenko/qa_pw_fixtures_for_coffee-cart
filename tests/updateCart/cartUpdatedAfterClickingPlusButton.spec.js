@@ -35,5 +35,7 @@ test('Assert cart updated correctly after clicking plus for drinks', async ({
     priceFormatStr(COFFEE_PRICES.ESPRESSO, 2),
   );
 
-  await cartPage.assertTotalCheckoutContainsValue('$58.00');
+  await cartPage.assertTotalCheckoutContainsValue(
+    priceFormatStr(COFFEE_PRICES.ESPRESSO * 2 + COFFEE_PRICES.CAPPUCCINO * 2),
+  );
 });
